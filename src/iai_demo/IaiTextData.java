@@ -48,7 +48,6 @@ public class IaiTextData implements IaiData {
 	 */
 	@Override
 	public String getData() throws FileNotFoundException, NullPointerException{
-		// read file into stream, try-with-resources
 		if (this.filename == null)
 			throw new NullPointerException("filename is not initialized.");
 		
