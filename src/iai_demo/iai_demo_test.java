@@ -4,8 +4,6 @@
 package iai_demo;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,7 +12,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- * @author orenf
+ * @author orenfromberg@gmail.com
  *
  */
 public class iai_demo_test {
@@ -49,7 +47,7 @@ public class iai_demo_test {
 
 	@Test(expected = FileNotFoundException.class)
 	public void file_does_not_exist() throws FileNotFoundException {
-		String filename = "resources/iai_data2.txt";
+		String filename = "resources/wrong_file.txt";
 		IaiTextData t = new IaiTextData(filename);
 		@SuppressWarnings("unused")
 		String data = t.getData();
@@ -64,7 +62,7 @@ public class iai_demo_test {
 	}
 
 	@Test
-	public void file_exists() throws FileNotFoundException {
+	public void file_exists_all_good() throws FileNotFoundException {
 		String filename = "resources/iai_data.txt";
 		IaiTextData t = new IaiTextData(filename);
 		String data = t.getData();

@@ -53,7 +53,6 @@ public class IaiTextData implements IaiData {
         try {
 			content = new String(Files.readAllBytes(Paths.get(this.filename)));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			throw new FileNotFoundException();
 		}
