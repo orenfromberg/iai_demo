@@ -40,8 +40,11 @@ public class IaiTextData implements IaiData {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
+	
 	/* (non-Javadoc)
 	 * @see iai_demo.IaiData#getData()
+	 * Reading IAI data from local text files can cause the following
+	 * exceptions to be thrown: FileNotFoundException and NullPointerException.
 	 */
 	@Override
 	public String getData() throws FileNotFoundException, NullPointerException{

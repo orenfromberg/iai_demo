@@ -13,7 +13,7 @@ import org.junit.Test;
 
 /**
  * @author orenfromberg@gmail.com
- *
+ * Simple set of unit tests for IaiTextData
  */
 public class iai_demo_test {
 
