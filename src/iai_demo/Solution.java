@@ -7,11 +7,11 @@ public class Solution {
 	public static void main(String[] args) {		
 		String fileName = "resources/iai_data.txt";
 		
-		IaiTextData source = new IaiTextData(fileName);
+		IaiDataTextSource source = new IaiDataTextSource(fileName);
 		
 		String content = null;
 		try {
-			content = source.getData();
+			content = source.readIaiData();
 		} catch (FileNotFoundException | NullPointerException e) {
 			e.printStackTrace();
 		}

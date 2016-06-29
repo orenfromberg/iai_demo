@@ -12,7 +12,7 @@ import java.nio.file.Paths;
  * @author orenfromberg@gmail.com
  * Implementation class for a text file IAI data source.
  */
-public class IaiTextData implements IaiData {
+public class IaiDataTextSource implements ReadableIaiData {
 
 	/**
 	 * filename of IAI data source
@@ -22,7 +22,7 @@ public class IaiTextData implements IaiData {
 	/**
 	 * @param filename
 	 */
-	public IaiTextData(String filename) {
+	public IaiDataTextSource(String filename) {
 		super();
 		this.filename = filename;
 	}
@@ -47,7 +47,7 @@ public class IaiTextData implements IaiData {
 	 * exceptions to be thrown: FileNotFoundException and NullPointerException.
 	 */
 	@Override
-	public String getData() throws FileNotFoundException, NullPointerException{
+	public String readIaiData() throws FileNotFoundException, NullPointerException{
 		if (this.filename == null)
 			throw new NullPointerException("filename is not initialized.");
 		

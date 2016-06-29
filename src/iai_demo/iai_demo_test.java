@@ -48,24 +48,24 @@ public class iai_demo_test {
 	@Test(expected = FileNotFoundException.class)
 	public void file_does_not_exist() throws FileNotFoundException {
 		String filename = "resources/wrong_file.txt";
-		IaiTextData source = new IaiTextData(filename);
+		IaiDataTextSource source = new IaiDataTextSource(filename);
 		@SuppressWarnings("unused")
-		String data = source.getData();
+		String data = source.readIaiData();
 	}
 	
 	@Test(expected = NullPointerException.class)
 	public void filename_is_null() throws NullPointerException, FileNotFoundException {
 		String filename = null;
-		IaiTextData source = new IaiTextData(filename);
+		IaiDataTextSource source = new IaiDataTextSource(filename);
 		@SuppressWarnings("unused")
-		String data = source.getData();
+		String data = source.readIaiData();
 	}
 
 	@Test
 	public void file_exists_all_good() throws FileNotFoundException {
 		String filename = "resources/iai_data.txt";
-		IaiTextData source = new IaiTextData(filename);
-		String data = source.getData();
+		IaiDataTextSource source = new IaiDataTextSource(filename);
+		String data = source.readIaiData();
 		assert(data != null);
 	}
 }

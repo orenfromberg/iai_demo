@@ -10,7 +10,7 @@ import java.net.SocketException;
  * @author orenfromberg@gmail.com
  * interface for getting data from an IAI data source.
  */
-public interface IaiData {
+public interface ReadableIaiData {
 	
 	/**
 	 * This method supports throwing exceptions that are related to
@@ -20,5 +20,5 @@ public interface IaiData {
 	 * @return String with IAI data
 	 * @throws FileNotFoundException, SocketException, NullPointerException
 	 */
-	String getData() throws FileNotFoundException, SocketException, NullPointerException;
+	String readIaiData() throws FileNotFoundException, SocketException, NullPointerException;
 }
